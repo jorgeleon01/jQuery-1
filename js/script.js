@@ -1,6 +1,25 @@
 $(document).ready(function(){
-	alert('Hola');
+	//Esta clase activa el primer enlace
+	$('.category_list .category_item[category="all"]').addClass('ct_item-active');
+
+	$('.category_item').click(function(){
+		//Quita clase al anterior enlace seleccionado
+		$('.category_item').removeClass('ct_item-active');
+		//Agrega clase al nuevo enlace seleccionado
+		$(this).addClass('ct_item-active');
+
+	});
 });
+
+
+
+
+
+
+
+
+
+
 // $(document).ready(function(){
 
 // 	// AGREGANDO CLASE ACTIVE AL PRIMER ENLACE ====================
