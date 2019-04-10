@@ -14,8 +14,14 @@ $(document).ready(function(){
 		$('.product-item').hide();
 		//Filtar productos
 		$('.product-item[category="'+catProduct+'"]').show();
-
 	});
+
+	$('.category_item[category="all"]').click(function(){
+		$('.product-item').show();
+	});
+
+
+
 });
 
 
