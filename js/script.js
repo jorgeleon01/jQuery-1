@@ -3,10 +3,17 @@ $(document).ready(function(){
 	$('.category_list .category_item[category="all"]').addClass('ct_item-active');
 
 	$('.category_item').click(function(){
+		//Guarda en variable la categoria seleccionada
+		var catProduct = $(this).attr('category');
 		//Quita clase al anterior enlace seleccionado
 		$('.category_item').removeClass('ct_item-active');
 		//Agrega clase al nuevo enlace seleccionado
 		$(this).addClass('ct_item-active');
+
+		//Ocultar productos
+		$('.product-item').hide();
+		//Filtar productos
+		$('.product-item[category="'+catProduct+'"]').show();
 
 	});
 });
